@@ -39,8 +39,8 @@ jobs:
       - name: Export Results
         uses: fortify/gha-export-vulnerabilities@v1
         with:
-          ssc_base_url: ${{ secrets.SSC_URL }}
-          ssc_auth_token: ${{ secrets.SSC_UPLOAD_TOKEN }}
+          ssc_base_url: $URL
+          ssc_auth_token: $TOKEN
           ssc_version_id: 10104
           #ssc_version_name: "${APPLICATION}:${VERSION}"
       
