@@ -38,7 +38,7 @@ jobs:
       - name: Perform SAST Scan
         #run: echo "BUILD OPTS = " + $BUILD_OPTS
         run: scancentral -ssctoken $TOKEN -sscurl ${URL} start $BUILD_OPTS -upload -application $APPLICATION -version $VERSION -uptoken $TOKEN
-        env:                                            
+        env:                                        
           URL: ${{ secrets.SSC_URL }}
           TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
           APPLICATION: "DemoWG"
@@ -50,4 +50,4 @@ jobs:
         if: failure()
         with:
            name: scancentral-logs
-           path: /home/runner/.fortify/scancentral/lo
+           path: ~/.fortify/scancentral-22.1.0/log
