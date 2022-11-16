@@ -42,7 +42,7 @@ jobs:
           URL: ${{ secrets.SSC_URL }}
           TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
           APPLICATION: "DemoWG"
-          VERSION: "18-002"
+          VERSION: "8-002"
           BUILD_OPTS: "-bt mvn"
       ### Archive ScanCentral Client logs on failure ###
       - name: Save ScanCentral Logs
