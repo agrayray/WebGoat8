@@ -34,6 +34,14 @@ jobs:
         with:
           java-version: 1.11
       ### Set up Fortify ScanCentral Client ###
+      
+      - name: Debug
+        run: | 
+          echo url=$URL 
+          echo token=$TOKEN
+          echo version=$APPLICATION:$VERSION 
+        
+      
 
       # Pull SAST issues from Fortify SSC and generate GitHub-optimized SARIF output
       - name: Export Results
